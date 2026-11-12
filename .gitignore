@@ -1,0 +1,13 @@
+node_modules/
+app/
+
+# Arquivos locais e resultados de execução
+.env
+.env.*
+!.env.example
+*.log
+logs/
+reports/
+screenshots/
+allure-results/
+allure-report/
