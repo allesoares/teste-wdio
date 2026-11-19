@@ -13,4 +13,13 @@ describe('Login no WDIO Demo App', () => {
         await LoginScreen.alertOkButton.click();
         await expect(LoginScreen.alertTitle).not.toBeExisting();
     });
+
+    it('deve exibir erro abaixo do campo ao informar e-mail inválido', async () => {
+        await LoginScreen.open();
+        await LoginScreen.login('email-invalido', 'Teste123!');
+
+        await expect(LoginScreen.emailError).toBeDisplayed();
+        await expect(LoginScreen.emailError).toHaveText('Please enter a valid email address');
+        await expect(LoginScreen.alertTitle).not.toBeExisting();
+    });
 });

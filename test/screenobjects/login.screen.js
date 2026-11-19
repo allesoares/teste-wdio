@@ -5,6 +5,7 @@ class LoginScreen {
     get emailInput() { return $('~input-email'); }
     get passwordInput() { return $('~input-password'); }
     get loginButton() { return $('~button-LOGIN'); }
+    get emailError() { return $('//android.widget.TextView[@text="Please enter a valid email address"]'); }
     get alertTitle() { return $('id=com.wdiodemoapp:id/alert_title'); }
     get alertMessage() { return $('id=android:id/message'); }
     get alertOkButton() { return $('id=android:id/button1'); }
